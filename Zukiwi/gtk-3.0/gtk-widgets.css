@@ -1828,9 +1828,9 @@ GtkFileChooserButton GtkImage:last-child {
 
 .scrollbar.trough,
 .scrollbar.trough.vertical {
-	background-image: linear-gradient(to right,
+	/*background-image: linear-gradient(to right,
 		@scrollbar_trough,
-		shade (@scrollbar_trough, 1.08));
+		shade (@scrollbar_trough, 1.08));*/
 		background-color: green;
 	border-left-width: 1px;
 	border-style: solid;
