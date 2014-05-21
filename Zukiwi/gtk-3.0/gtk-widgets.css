@@ -1875,7 +1875,7 @@ GtkFileChooserButton GtkImage:last-child {
 		background: alpha(@theme_bg_color, 0.0);
 	border: alpha(@theme_bg_color, 0.0);*/
  /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
-}
+/*}*/
 
 
 /*.scrollbars-junction {
