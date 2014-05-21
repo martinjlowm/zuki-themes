@@ -1819,10 +1819,9 @@ GtkFileChooserButton GtkImage:last-child {
 .scrollbars-junction,
 .scrollbar.trough {
   	border: alpha (@base_color, 0.0);
-    background: green;
     border-width: 0;
     border-radius: 0;
-    background-color: @theme_bg_color;
+    background: alpha (@base_color, 0.0);
     background-image: none;
 }
 
