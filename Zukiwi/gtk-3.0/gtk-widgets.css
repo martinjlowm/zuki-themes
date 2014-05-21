@@ -1814,6 +1814,7 @@ GtkFileChooserButton GtkImage:last-child {
 		-GtkScrollbar-has-forward-stepper: false;
 		-GtkRange-slider-width: 10;
 		-GtkScrollbar-min-slider-length: 42;
+		background-color: green;
 }
 
 .scrollbars-junction,
