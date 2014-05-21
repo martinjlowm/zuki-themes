@@ -1813,6 +1813,8 @@ GtkFileChooserButton GtkImage:last-child {
 	-GtkRange-slider-width: 5;
 	-GtkScrollbar-min-slider-length: 42; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 
+		background: alpha(@theme_bg_color, 0.0);
+	border: alpha(@theme_bg_color, 0.0);
 	-GtkRange-stepper-spacing: 0;
 	-GtkRange-trough-under-steppers: 1;
 }
@@ -1831,12 +1833,12 @@ GtkFileChooserButton GtkImage:last-child {
 		@scrollbar_trough,
 		shade (@scrollbar_trough, 1.08));*/
 		background: alpha(@theme_bg_color, 0.0);
-	border-left-width: 1px;
+	/*border-left-width: 1px;
 	border-style: solid;
 	border-color: shade (@theme_bg_color, 0.94);
 	border-radius: 0;
-	border-image: none;
-	border: alpha(@theme_bg_color, 0.0);;
+	border-image: none;*/
+	border: alpha(@theme_bg_color, 0.0);
 	box-shadow: none;
 }
 
