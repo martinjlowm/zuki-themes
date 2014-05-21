@@ -1808,7 +1808,7 @@ GtkFileChooserButton GtkImage:last-child {
     border-style: solid;
     padding: 0;
 		-GtkRange-stepper-spacing: 0;
-		-GtkRange-trough-under-steppers: 1;
+		-GtkRange-trough-under-steppers: 0;
 		-GtkRange-trough-border: 0;
 		-GtkScrollbar-has-backward-stepper: false;
 		-GtkScrollbar-has-forward-stepper: false;
