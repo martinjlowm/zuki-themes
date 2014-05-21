@@ -1803,11 +1803,65 @@ GtkFileChooserButton GtkImage:last-child {
 /**************
  * Scrollbars *
  **************/
-
 .scrollbar {
+    border-width: 1px;
+    border-style: solid;
+    padding: 0;
+		-GtkRange-stepper-spacing: 0;
+		-GtkRange-trough-under-steppers: 1;
+		-GtkRange-trough-border: 0;
+		-GtkScrollbar-has-backward-stepper: false;
+		-GtkScrollbar-has-forward-stepper: false;
+		-GtkRange-slider-width: 10;
+		-GtkScrollbar-min-slider-length: 42;
+}
+
+.scrollbars-junction,
+.scrollbar.trough {
+    border-width: 0;
+    border-radius: 0;
+    background-color: @theme_bg_color;
+    background-image: none;
+}
+
+.scrollbar.button,
+.scrollbar.button:active,
+.scrollbar.button:active:hover {
+    border-width: 0;
+    border-radius: 0;
+    background-color: transparent;
+    background-image: none;
+    color: shade(@theme_bg_color, 0.6);
+}
+
+.scrollbar.slider {
+    border-width: 1px;
+    border-color: mix(shade(@theme_bg_color, 0.87), @theme_fg_color, 0.21);
+    border-radius: 0;
+    background-color: mix(@theme_bg_color, @theme_fg_color, 0.21);
+}
+
+.scrollbar.slider:hover,
+.scrollbar.slider.vertical:hover {
+    border-color: mix(shade(@theme_bg_color, 0.87), @theme_fg_color, 0.31);
+    background-color: mix(@theme_bg_color, @theme_fg_color, 0.31);
+}
+
+.scrollbar.slider:active,
+.scrollbar.slider.vertical:active {
+    border-color: shade(@theme_selected_bg_color, 0.9);
+    background-color: @theme_selected_bg_color;
+}
+
+.scrollbar.slider.fine-tune:prelight:active {
+      border-width: 2px;
+      border-color: transparent;
+}
+
+/*.scrollbar {
 	border-width: 1px;
 	border-style: solid;
-	padding: 0;
+	padding: 0;*/
 		/*border-width: 0;
 	border-radius: 0;
 	border-image: none;*/
@@ -1817,13 +1871,7 @@ GtkFileChooserButton GtkImage:last-child {
 
 		background: alpha(@theme_bg_color, 0.0);
 	border: alpha(@theme_bg_color, 0.0);*/
-	-GtkRange-stepper-spacing: 0;
-	-GtkRange-trough-under-steppers: 1;
-	-GtkRange-trough-border: 0;
-	-GtkScrollbar-has-backward-stepper: false;
-	-GtkScrollbar-has-forward-stepper: false;
-	-GtkRange-slider-width: 10;
-	-GtkScrollbar-min-slider-length: 42; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
+ /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 }
 
 
