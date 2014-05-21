@@ -1836,7 +1836,7 @@ GtkFileChooserButton GtkImage:last-child {
 	border-color: shade (@theme_bg_color, 0.94);
 	border-radius: 0;
 	border-image: none;
-	border: 0;
+	border: alpha(@theme_bg_color, 0.0);;
 	box-shadow: none;
 }
 
