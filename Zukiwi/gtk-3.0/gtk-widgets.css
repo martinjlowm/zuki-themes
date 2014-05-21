@@ -41,7 +41,7 @@
 	-GtkWidget-focus-padding: 2;
 	-GtkWidget-focus-line-width: 1;
 	-GtkWindow-resize-grip-width: 0;
-	-GtkWindow-resize-grip-height: 0;   
+	-GtkWindow-resize-grip-height: 0;
 
 	/* We use the outline properties to signal the focus properties
 	 * to the adwaita engine: using real CSS properties is faster,
@@ -348,7 +348,7 @@ GtkTreeView.separator,
 	border-image: none;
 	border-style: none;
 	background-color: transparent;
-	background-image: linear-gradient(to top, 
+	background-image: linear-gradient(to top,
 		transparent 2px,
 		white 2px,
 		white 3px,
@@ -361,7 +361,7 @@ GtkTreeView.separator,
 
 .entry.progressbar.pulse,
 .entry.progressbar.pulse:focus {
-	background-image: linear-gradient(to top, 
+	background-image: linear-gradient(to top,
 		transparent 2px,
 		white 2px,
 		white 3px,
@@ -516,14 +516,14 @@ GtkTreeView.separator,
 .spinbutton.vertical .button:first-child {
 	border-image-width: 3px 3px 0 3px;
 	border-width: 2px 1px 0 1px;
-	border-bottom-left-radius: 0; 
+	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
 .spinbutton.vertical .button:last-child {
 	border-image-width: 0 3px 4px 3px;
 	border-width: 0 1px 2px 1px;
-	border-top-left-radius: 0; 
+	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
 
@@ -533,7 +533,7 @@ GtkTreeView.separator,
 	border-width: 0 1px 0 1px;
 	border-style: solid;
 	border-radius: 0;
-	box-shadow: inset 1px 0 0 0 @borders, 
+	box-shadow: inset 1px 0 0 0 @borders,
 		inset -1px 0 0 0 @borders,
 		inset 0 1px 0 0 @borders,
 		inset 0 -1px 0 0 @borders;
@@ -552,7 +552,7 @@ GtkTreeView.separator,
 
 .spinbutton.vertical.entry:focus {
 	border-color: alpha(@borders, 0.1);
-	box-shadow: inset 1px 0 0 0 @theme_selected_bg_color, 
+	box-shadow: inset 1px 0 0 0 @theme_selected_bg_color,
 		inset -1px 0 0 0 @theme_selected_bg_color,
 		inset 0 1px 0 0 @theme_selected_bg_color,
 		inset 0 -1px 0 0 @theme_selected_bg_color;
@@ -936,7 +936,7 @@ GtkScrolledWindow.frame {
 	padding: 0;
 }
 
-/* avoid double borders when a viewport is 
+/* avoid double borders when a viewport is
  * packed into a GtkScrolledWindow */
 GtkScrolledWindow GtkViewport.frame {
 	border-style: none;
@@ -986,7 +986,7 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button {
 	border-image: none;
 
-	/* setting border-style: none; here would override the border-width values 
+	/* setting border-style: none; here would override the border-width values
 	 * we set in gtk-widget-borders.css to zero.
 	 */
 	border-style: solid;
@@ -1112,7 +1112,7 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar .button:only-child,
 .inline-toolbar.toolbar GtkToolButton:last-child > .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton:only-child > .button {
-	box-shadow: none; 
+	box-shadow: none;
 }
 
 /* remove inset from first-child and only-child active buttons */
@@ -1450,7 +1450,7 @@ GtkLinkButton.button:active {
 	text-shadow: none;
 }
 
-.button .separator { 
+.button .separator {
 	color: shade(@internal_element_color, 1.30);
 }
 
@@ -1745,7 +1745,7 @@ GtkComboBox.combobox-entry .button:last-child,
 GtkComboBox.combobox-entry .button:hover:last-child,
 GtkComboBox.combobox-entry .button:active:last-child,
 GtkComboBox.combobox-entry .button:hover:active:last-child {
-	box-shadow: inset 1px 0 @inset_dark_color, 
+	box-shadow: inset 1px 0 @inset_dark_color,
 		inset 0 1px @entry_inset,
 		inset 0 2px alpha(@entry_inset, 0.4);
 }
@@ -1754,7 +1754,7 @@ GtkComboBox.combobox-entry .button:first-child,
 GtkComboBox.combobox-entry .button:hover:first-child,
 GtkComboBox.combobox-entry .button:active:first-child,
 GtkComboBox.combobox-entry .button:hover:active:first-child {
-	box-shadow: inset -1px 0 @inset_dark_color, 
+	box-shadow: inset -1px 0 @inset_dark_color,
 		inset 0 1px @entry_inset,
 		inset 0 2px alpha(@entry_inset, 0.4);
 }
@@ -1806,11 +1806,12 @@ GtkFileChooserButton GtkImage:last-child {
 
 .scrollbar {
 	background-image: none;
+	background-color: green;
 	border-style: solid;
 	-GtkRange-trough-border: 0;
 	-GtkScrollbar-has-backward-stepper: false;
 	-GtkScrollbar-has-forward-stepper: false;
-	-GtkRange-slider-width: 13;
+	-GtkRange-slider-width: 10;
 	-GtkScrollbar-min-slider-length: 42; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 
 	-GtkRange-stepper-spacing: 0;
@@ -1823,6 +1824,7 @@ GtkFileChooserButton GtkImage:last-child {
 	border-width: 0;
 	border-radius: 0;
 	border-image: none;
+	transition: top 2s ease;
 }
 
 .scrollbar.trough,
@@ -2271,9 +2273,9 @@ GtkCheckButton:selected:focus {
  ********************/
 .toolbar.menubar {
 	-GtkToolbar-button-relief: normal;
-	
+
 	padding: 6px 6px 5px 6px; /* weird padding to compensate border-images
-					and eventual top border presence, 
+					and eventual top border presence,
 					see selection mode toolbars */
 
 }
@@ -2797,7 +2799,7 @@ GtkProgressBar.osd.progressbar {
 	border-style: none;
 	background-color: @theme_selected_bg_color;
 	background-image: none;
-	border-radius: 0;	
+	border-radius: 0;
 }
 
 .osd .view,
@@ -3638,7 +3640,7 @@ GtkModelButton.button:selected {
 /*	background-image: linear-gradient(to bottom,
 		@button_hover_gradient_color_a,
 		shade(@button_hover_gradient_color_b, 0.92) 50%,
-		shade(@button_hover_gradient_color_b, 0.88) 49%,  
+		shade(@button_hover_gradient_color_b, 0.88) 49%,
 		@button_hover_gradient_color_b);*/
 	border: none;
 	border-image: none;
@@ -3678,7 +3680,7 @@ GtkModelButton.button:selected {
 .window-frame {
 	border-radius: 6px 6px 0 0;
 	/* lamefun trick to get rounded borders regardless of CSD use */
-	border-width: 0px;	
+	border-width: 0px;
 	box-shadow: 0 0 0 1px @wm_border, 0 2px 8px 3px @wm_shadow;
 
 	/* this is used for the resize cursor area */
